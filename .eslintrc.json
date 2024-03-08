@@ -1,0 +1,18 @@
+{
+  "env": {
+     "es6": true,
+     "node": true
+  },
+  "plugins": ["jsdoc"],
+  "extends": ["plugin:jsdoc/recommended"],
+  "parserOptions": {
+     "ecmaVersion": 2015,
+     "sourceType": "module"
+  },
+  "rules":{
+    "jsdoc/require-property-description": 0,
+    "jsdoc/require-param-description": 0,
+    "jsdoc/no-undefined-types": 0
+  }
+}
+ 

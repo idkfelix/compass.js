@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "checkJs": true,
+    "allowJs": true,
+    "strict": true,
+    "typeRoots": [
+      "./src/types",
+      "./node_modules/@types"
+    ],
+  },
+  "exclude": ["node_modules"],
+}
