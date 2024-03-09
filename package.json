@@ -9,7 +9,8 @@
   "main": "./src/index.js",
   "type": "module",
   "scripts": {
-    "eslint": "npx eslint ./src/**/* --fix"
+    "eslint": "npx eslint ./src/**/* --fix",
+    "pp": "npm version patch && npm publish"
   },
   "author": "idkfelix",
   "license": "MIT",
