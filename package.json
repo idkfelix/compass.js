@@ -1,7 +1,11 @@
 {
-  "name": "compass.js",
-  "version": "0.0.0",
+  "name": "@idkfelix/compass.js",
+  "version": "1.0.0",
   "description": "API Client for Compass Edu written in JavaScript and typed with JSDoc",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/idkfelix/compass.js.git"
+  },
   "main": "./src/index.js",
   "type": "module",
   "scripts": {

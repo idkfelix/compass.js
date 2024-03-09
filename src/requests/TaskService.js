@@ -35,7 +35,7 @@ export default class TaskService{
    * @param {TaskItemBody} task
    * @returns {Promise<number>} Task Id
    */
-  createTaskItem(task){
+  saveTaskItem(task){
     /** @type {TaskItemRequest} */
     let data = {"task":task}
     return this.client.newRequest("TaskService",'SaveTaskItem',data)
