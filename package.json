@@ -1,6 +1,6 @@
 {
   "name": "@idkfelix/compass.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "API Client for Compass Edu written in JavaScript and typed with JSDoc",
   "repository": {
     "type": "git",
@@ -9,7 +9,7 @@
   "main": "./src/index.js",
   "type": "module",
   "scripts": {
-    "eslint":"npx eslint ./src/**/* --fix"
+    "eslint": "npx eslint ./src/**/* --fix"
   },
   "author": "idkfelix",
   "license": "MIT",
