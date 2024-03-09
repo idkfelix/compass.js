@@ -10,6 +10,7 @@
 
 ## Resources
 NPM Package: https://www.npmjs.com/package/@idkfelix/compass.js \
+GitHub Repo: https://github.com/idkfelix/compass.js \
 Compass Website: https://www.compass.education/
 
 ## Installation
