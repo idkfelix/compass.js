@@ -3,8 +3,10 @@
   "version": "1.0.3",
   "description": "API Client for Compass Edu written in JavaScript and typed with JSDoc",
   "repository": {
-    "type": "git",
-    "url": "https://github.com/idkfelix/compass.js.git"
+    "url": "git+https://github.com/idkfelix/compass.js.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   },
   "main": "./src/index.js",
   "type": "module",
