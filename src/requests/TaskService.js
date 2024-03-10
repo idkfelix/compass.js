@@ -1,65 +1,74 @@
 import CompassClient from "../index.js";
 
-export default class TaskService{
-  /**
-   * @description Create Class with CompassClient
-   * @param {CompassClient} client 
-   */
-  constructor(client){
-    /** @private */
-    this.client = client
-  }
-
+/**
+ * @module TaskService
+ * @param {CompassClient} client 
+ * @returns {object} TaskService methods
+ */
+export default function TaskService(client){
   /** 
+   * @memberof module:TaskService
    * @description  Requests all task items
    * @param {number} [limit]
    * @returns {Promise<TaskItemResponse>} Array of user task objects
    */
-  getAllTaskItems(limit){
-    return this.client.newRequest("TaskService",'GetAllTaskItems',
+  function getAllTaskItems(limit){
+    return client.newRequest("TaskService",'GetAllTaskItems',
       {"page": 1,"start": 0,"limit": limit || 1000})
   }
 
   /** 
+   * @memberof module:TaskService
    * @description Requests all task items with status: False (visable on home page)
    * @param {number} [limit]
    * @returns {Promise<TaskItemResponse>} Array of user task objects
    */
-  getTaskItems(limit){
-    return this.client.newRequest("TaskService",'GetTaskItems',
+  function getTaskItems(limit){
+    return client.newRequest("TaskService",'GetTaskItems',
       {"page": 1,"start": 0,"limit": limit || 1000})
   }
   
   /**
+   * @memberof module:TaskService
    * @description Creates a task
    * @param {TaskItemBody} task
    * @returns {Promise<number>} Task Id
    */
-  saveTaskItem(task){
+  function saveTaskItem(task){
     /** @type {TaskItemRequest} */
     let data = {"task":task}
-    return this.client.newRequest("TaskService",'SaveTaskItem',data)
+    return client.newRequest("TaskService",'SaveTaskItem',data)
   }
 
   /**
+   * @memberof module:TaskService
    * @description Deletes a task item 
    * @param {TaskItemBody} task
    * @returns {Promise<number>} Task Id
    */
-  deleteTaskItem(task){
+  function deleteTaskItem(task){
     /** @type {TaskItemRequest} */
     let data = {"task":task}
-    return this.client.newRequest("TaskService",'DeleteTaskItem',data)
+    return client.newRequest("TaskService",'DeleteTaskItem',data)
   }
 
   /**
+   * @memberof module:TaskService
    * @description Updates a task item by Id
    * @param {TaskItemBody} task
    * @returns {Promise<null>} Returns nothing
    */
-  updateTaskItem(task){
+  function updateTaskItem(task){
     /** @type {TaskItemRequest} */
     let data = {"task":task}
-    return this.client.newRequest("TaskService",'UpdateTaskItem',data)
+    return client.newRequest("TaskService",'UpdateTaskItem',data)
+  }
+
+  return {
+    getAllTaskItems,
+    getTaskItems,
+    saveTaskItem,
+    deleteTaskItem,
+    updateTaskItem
   }
 }

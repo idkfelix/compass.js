@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: types/learningTasks.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: types/learningTasks.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Request Object of GetAllLearningTasksByUserId endpoint
+ * @typedef {object} LearningTaskUserIdRequest
+ * @property {boolean} showHiddenTasks
+ * @property {number} limit
+ * @property {number} userId
+ */
+
+/**
+ * Request Object of GetAllLearningTasksByActivityId endpoint
+ * @typedef {object} LearningTaskActivityIdRequest
+ * @property {boolean} showHiddenTasks
+ * @property {number} limit
+ * @property {number} activityId
+ */
+
+
+/**
+ * Response Object of GetAllLearningTasksBy\* endpoint
+ * @typedef {object} LearningTaskResponse
+ * @property {LearningTask[]} data
+ * @property {number} total
+ */
+
+/**
+ * Child Object of LearningTaskResponse
+ * @typedef {object} LearningTask
+ * @property {number} activityId
+ * @property {string} activityName
+ * @property {string} activityStart
+ * @property {Attachments[]} attachments
+ * @property {boolean} canEditResults
+ * @property {boolean} canManage
+ * @property {number} categoryId
+ * @property {string} createdTimestamp
+ * @property {string} description
+ * @property {boolean} displayPrimaryGrading
+ * @property {number} distributionType
+ * @property {string} dueDateTimestamp
+ * @property {string} groupName
+ * @property {boolean} hidden
+ * @property {number} id
+ * @property {boolean} important
+ * @property {boolean} includeBreakdownHeading
+ * @property {boolean} includeInOverall
+ * @property {boolean} includeInSemesterReports
+ * @property {boolean} includeTitleOnSummaryVertical
+ * @property {boolean} isAggregateTask
+ * @property {boolean} isContributingTask
+ * @property {string} name
+ * @property {boolean} showTaskDueDates
+ * @property {Student[]} students
+ * @property {string} subjectName
+ * @property {string} taskReportDescription
+ * @property {string} taskTitleOnReport
+ * @property {boolean} verticalBreakdownHeadings
+ * @property {number} wikiNodeId
+ */
+
+/**
+ * Child Object of LearningTask
+ * @typedef {object} Student
+ * @property {Comments[]} comments
+ * @property {string} dueDateTimestamp
+ * @property {number} id
+ * @property {string} lastSubmittedTimestamp
+ * @property {?} primaryResult
+ * @property {Result[]} results
+ * @property {boolean} selfAssessmentEnabled
+ * @property {string} smsOutstandingSentTimestamp
+ * @property {number} submissionStatus
+ * @property {Submission[]} submissions
+ * @property {string} submittedTimestamp
+ * @property {number} taskId
+ * @property {?} teacherResponses
+ * @property {number} userId
+ * @property {string} userName
+ */
+
+/**
+ * Child Object of LearningTask
+ * @typedef {object} Attachments
+ * @property {string} contentUrl
+ * @property {string} fileName
+ * @property {string} id
+ * @property {string} name
+ * @property {number} wikiNodeId
+ * @property {number} wikiNodeType
+ */
+
+/**
+ * Child Object of Student
+ * @typedef {object} Result
+ * @property {number} flaggedResultType
+ * @property {number} id
+ * @property {boolean} isCalculatedResult
+ * @property {boolean} isEstimatedResult
+ * @property {string} lockedTimestamp
+ * @property {number} modifiedByUserId
+ * @property {string} modifiedTimestamp
+ * @property {string} reportGradingSchemeOptionId
+ * @property {string} result
+ * @property {number} taskGradingItemId
+ * @property {number} taskStudentId
+ * @property {number} userIdLocked
+ */
+
+/**
+ * Child Object of Student
+ * @typedef {object} Submission
+ * @property {string} contentUrl
+ * @property {string} fileId
+ * @property {string} fileName
+ * @property {number} id
+ * @property {number} submissionFileType
+ * @property {number} submitterBaseRole
+ * @property {number} taskStudentId
+ * @property {number} taskSubmissionItemId
+ * @property {string} timestamp
+ * @property {number} wikiNodeId
+ */
+
+/**
+ * Child Object of Student 
+ * @typedef {object} Comments
+ * @property {string} comment
+ * @property {number} id
+ * @property {number} status
+ * @property {number} taskStudentId
+ * @property {string} timestamp
+ * @property {number} userIdPoster
+ * @property {string} userNamePoster
+ */
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-Accounts.html">Accounts</a></li><li><a href="module-Activity.html">Activity</a></li><li><a href="module-Calendar.html">Calendar</a></li><li><a href="module-LearningTasks.html">LearningTasks</a></li><li><a href="module-TaskService.html">TaskService</a></li><li><a href="module-Users.html">Users</a></li></ul><h3>Classes</h3><ul><li><a href="CompassClient.html">CompassClient</a></li></ul><h3><a href="global.html">Global</a></h3>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Sun Mar 10 2024 13:51:23 GMT+1100 (Australian Eastern Daylight Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

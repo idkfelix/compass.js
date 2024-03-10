@@ -23,12 +23,12 @@
  * @property {string} nif
  * @property {string} ns
  * @property {string} p
- * @property {[]} parentIds
+ * @property {number[]} parentIds
  * @property {string} phoneExtension
  * @property {string} pv
  * @property {string} reportName
  * @property {string} rfid
- * @property {[]} rfidCards
+ * @property {any[]} rfidCards
  * @property {string} start
  * @property {string} sussiId
  */

@@ -1,21 +1,22 @@
 import CompassClient from "../index.js";
 
-export default class Accounts{
+/** 
+ * @module Accounts
+ * @param {CompassClient} client
+ * @returns {object} Account methods
+ */
+export default function Accounts(client) {
   /**
-   * @description Create Class with CompassClient
-   * @param {CompassClient} client 
-   */
-  constructor(client){
-    /** @private */
-    this.client = client
-  }
-
-  /**
+   * @memberof module:Accounts
    * @description Request current user info from cookies
    * @description This is called on init(), use the .userInfo object instead
    * @returns {Promise<AccountResponse>} Returns account details object
    */
-  getAccount(){
-    return this.client.newRequest("Accounts",'GetAccount')
+  function getAccount(){
+    return client.newRequest("Accounts",'GetAccount')
+  }
+  
+  return {
+    getAccount
   }
 }

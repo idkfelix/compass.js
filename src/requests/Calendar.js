@@ -1,16 +1,13 @@
 import CompassClient from "../index.js";
 
-export default class Calendar{
+/**
+ * @module Calendar
+ * @param {CompassClient} client
+ * @returns {object} Calendar methods
+ */
+export default function Calendar(client){
   /**
-   * @description Create Class with CompassClient
-   * @param {CompassClient} client 
-   */
-  constructor(client){
-    /** @private */
-    this.client = client
-  }
-
-  /**
+   * @memberof module:Calendar
    * @description Get all events in a defined time frame by userId
    * @param {number} userId
    * @param {string} startDate "yyyy-mm-dd"
@@ -20,9 +17,13 @@ export default class Calendar{
    *  let date = new Date().toISOstring().slice(0, 10)
    *  client.getCalendarEventsByUser(client.userId,date,date)
    */
-  getCalendarEventsByUser(userId,startDate,endDate){
+  function getCalendarEventsByUser(userId,startDate,endDate){
     /** @type {CalendarRequest} */
     let data = {"userId":userId,"startDate":startDate,"endDate":endDate}
-    return this.client.newRequest("Calendar",'GetCalendarEventsByUser',data)
+    return client.newRequest("Calendar",'GetCalendarEventsByUser',data)
+  }
+  
+  return {
+    getCalendarEventsByUser
   }
 }

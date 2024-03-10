@@ -1,23 +1,24 @@
 import CompassClient from "../index.js";
 
-export default class Users{
+/**
+ * @module Users
+ * @param {CompassClient} client 
+ * @returns {object} Users methods
+ */
+export default function Users(client){
   /**
-   * @description Create Class with CompassClient
-   * @param {CompassClient} client 
-   */
-  constructor(client){
-    /** @private */
-    this.client = client
-  }
-
-  /**
+   * @memberof module:Users
    * @description Request all staff user info
    * @param {number} [limit] 
    * @returns {Promise<Partial<StaffResponse>>} Returns array of staff object
    */
-  getAllStaff(limit){
+  function getAllStaff(limit){
     /** @type {{limit:number}} */
     let data = {"limit":limit || 1000}
-    return this.client.newRequest("User",'GetAllStaff',data)
+    return client.newRequest("User",'GetAllStaff',data)
+  }
+  
+  return{
+    getAllStaff
   }
 }
