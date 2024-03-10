@@ -1,11 +1,8 @@
-import CompassClient from "../index.js";
-
 /**
  * @module TaskService
- * @param {CompassClient} client 
- * @returns {object} TaskService methods
+ * @param {*} newRequest
  */
-export default function TaskService(client){
+function TaskService(newRequest){
   /** 
    * @memberof module:TaskService
    * @description  Requests all task items
@@ -13,7 +10,7 @@ export default function TaskService(client){
    * @returns {Promise<TaskItemResponse>} Array of user task objects
    */
   function getAllTaskItems(limit){
-    return client.newRequest("TaskService",'GetAllTaskItems',
+    return newRequest("TaskService",'GetAllTaskItems',
       {"page": 1,"start": 0,"limit": limit || 1000})
   }
 
@@ -24,7 +21,7 @@ export default function TaskService(client){
    * @returns {Promise<TaskItemResponse>} Array of user task objects
    */
   function getTaskItems(limit){
-    return client.newRequest("TaskService",'GetTaskItems',
+    return newRequest("TaskService",'GetTaskItems',
       {"page": 1,"start": 0,"limit": limit || 1000})
   }
   
@@ -37,7 +34,7 @@ export default function TaskService(client){
   function saveTaskItem(task){
     /** @type {TaskItemRequest} */
     let data = {"task":task}
-    return client.newRequest("TaskService",'SaveTaskItem',data)
+    return newRequest("TaskService",'SaveTaskItem',data)
   }
 
   /**
@@ -49,7 +46,7 @@ export default function TaskService(client){
   function deleteTaskItem(task){
     /** @type {TaskItemRequest} */
     let data = {"task":task}
-    return client.newRequest("TaskService",'DeleteTaskItem',data)
+    return newRequest("TaskService",'DeleteTaskItem',data)
   }
 
   /**
@@ -61,7 +58,7 @@ export default function TaskService(client){
   function updateTaskItem(task){
     /** @type {TaskItemRequest} */
     let data = {"task":task}
-    return client.newRequest("TaskService",'UpdateTaskItem',data)
+    return newRequest("TaskService",'UpdateTaskItem',data)
   }
 
   return {
@@ -72,3 +69,4 @@ export default function TaskService(client){
     updateTaskItem
   }
 }
+export default TaskService

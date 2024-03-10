@@ -1,11 +1,8 @@
-import CompassClient from "../index.js";
-
 /**
  * @module Users
- * @param {CompassClient} client 
- * @returns {object} Users methods
+ * @param {*} newRequest
  */
-export default function Users(client){
+function Users(newRequest){
   /**
    * @memberof module:Users
    * @description Request all staff user info
@@ -15,10 +12,11 @@ export default function Users(client){
   function getAllStaff(limit){
     /** @type {{limit:number}} */
     let data = {"limit":limit || 1000}
-    return client.newRequest("User",'GetAllStaff',data)
+    return newRequest("User",'GetAllStaff',data)
   }
   
   return{
     getAllStaff
   }
 }
+export default Users

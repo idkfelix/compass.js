@@ -32,7 +32,7 @@ import 'dotenv/config';
 (async()=>{
   let cookie = process.env.COOKIE
   if(!token) throw new Error('Error: No cookie')
-  const client = await CompassClient.init('example.compass.education',cookie);
+  const client = await CompassClient('example.compass.education',cookie);
   console.log(client.userInfo);
 })();
 ```

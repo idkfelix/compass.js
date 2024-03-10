@@ -1,11 +1,8 @@
-import CompassClient from "../index.js";
-
 /**
  * @module LearningTasks
- * @param {CompassClient} client 
- * @returns {object} LearningTask methods
+ * @param {*} newRequest
  */
-export default function LearningTasks(client){
+function LearningTasks(newRequest){
   /**
    * @memberof module:LearningTasks
    * @description Requests Learning Tasks by UserId
@@ -17,7 +14,7 @@ export default function LearningTasks(client){
   function getAllLearningTasksByUserId(userId,limit,showHiddenTasks){
     /** @type {Partial<LearningTaskUserIdRequest>} */
     let data = {'userId':userId,'limit':limit || 1000,'showHiddenTasks':showHiddenTasks || false}
-    return client.newRequest("LearningTasks",'GetAllLearningTasksByUserId',data)
+    return newRequest("LearningTasks",'GetAllLearningTasksByUserId',data)
   }
 
   /**
@@ -31,7 +28,7 @@ export default function LearningTasks(client){
   function getAllLearningTasksByActivityId(activityId,limit,showHiddenTasks){
     /** @type {Partial<LearningTaskActivityIdRequest>} */
     let data = {'activityId':activityId,'limit':limit || 1000,'showHiddenTasks':showHiddenTasks || false}
-    return client.newRequest("LearningTasks",'GetAllLearningTasksByActivityId',data)
+    return newRequest("LearningTasks",'GetAllLearningTasksByActivityId',data)
   }
 
   return {
@@ -39,3 +36,4 @@ export default function LearningTasks(client){
     getAllLearningTasksByUserId
   }
 }
+export default LearningTasks
