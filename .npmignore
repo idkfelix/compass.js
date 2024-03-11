@@ -1,3 +1,2 @@
-.env
-.github/
-test.js
+.git*
+docs/
