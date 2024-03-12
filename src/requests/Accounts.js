@@ -9,7 +9,7 @@ function Accounts(newRequest) {
    * Request current user info from cookies
    * @memberof module:CompassClient.Accounts
    * @returns {Promise<AccountResponse>} Resolves account details object
-   * @deprecated This function is called on init, use client.userInfo instead
+   * @deprecated This function is called on init, use {@link CompassClient.userInfo} instead
    */
   function getAccount(){
     return newRequest("Accounts",'GetAccount')
