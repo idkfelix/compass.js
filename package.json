@@ -19,9 +19,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.11.25",
-    "dotenv": "^16.4.5",
-    "eslint": "^8.57.0",
-    "eslint-plugin-jsdoc": "^48.2.1",
-    "jsdoc": "^4.0.2"
+    "better-docs": "^2.7.3",
+    "eslint-plugin-jsdoc": "^48.2.1"
   }
 }

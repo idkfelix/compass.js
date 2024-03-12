@@ -1,25 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>JSDoc: Module: CompassClient</title>
 
-    <script src="scripts/prettify/prettify.js"> </script>
-    <script src="scripts/prettify/lang-css.js"> </script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> CompassClient</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
 </head>
 
-<body>
 
-<div id="main">
 
-    <h1 class="page-title">Module: CompassClient</h1>
-
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
     
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-CompassClient.html">CompassClient</a></li></ul><h3>Namespaces</h3><ul><li><a href="module-CompassClient.Accounts.html">Accounts</a></li><li><a href="module-CompassClient.Activity.html">Activity</a></li><li><a href="module-CompassClient.Calendar.html">Calendar</a></li><li><a href="module-CompassClient.LearningTasks.html">LearningTasks</a></li><li><a href="module-CompassClient.TaskService.html">TaskService</a></li><li><a href="module-CompassClient.Users.html">Users</a></li></ul><h3><a href="global.html">Global</a></h3></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Module</p>
+                    <h1>CompassClient</h1>
+                </header>
+                
 
 
 
@@ -65,18 +122,19 @@
     
 
     
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line7">line 7</a>
-    </li></ul></dd>
     
 
     
 
     
 
+    
+        <p class="tag-source">
+            <a href="index.js.html" class="button">View Source</a>
+            <span>
+                <a href="index.js.html">index.js</a>, <a href="index.js.html#line7">line 7</a>
+            </span>
+        </p>
     
 </dl>
 
@@ -84,12 +142,14 @@
         
             <h3>Example</h3>
             
-    <pre class="prettyprint"><code>const client = CompassClient('school.compass.education','ASP.NET_SessionId=...')</code></pre>
+    
+        <pre class="prettyprint"><code>const client = CompassClient('school.compass.education','ASP.NET_SessionId=...')</code></pre>
+    
 
         
     
     </div>
-
+    
     
 
     
@@ -127,20 +187,33 @@
     
 
     
-        <h3 class="subsection-title">Methods</h3>
+        <div class='vertical-section'>
+            <h1>Methods</h1>
+            <div class="members">
+            
+                <div class="member">
 
+
+    
+    <h4 class="name" id=".downloadFile">
+        <a class="href-link" href="#.downloadFile">#</a>
         
             
-
+                <span class='tag'>async</span>
+            
+                <span class='tag'>static</span>
+            
+        
+        <span class="code-name">
+            
+                downloadFile<span class="signature">(id, nodeId)</span><span class="type-signature"> &rarr; {Promise.&lt;string>}</span>
+            
+        </span>
+    </h4>
     
 
     
-    <h4 class="name" id=".downloadFile"><span class="type-signature">(async, static) </span>downloadFile<span class="signature">(id, nodeId)</span><span class="type-signature"> &rarr; {Promise.&lt;string>}</span></h4>
     
-
-    
-
-
 
 
 
@@ -152,75 +225,79 @@
 
     <h5>Parameters:</h5>
     
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
+<div class="table-container">
+    <table class="params table">
+        <thead>
         <tr>
             
-                <td class="name"><code>id</code></td>
+            <th>Name</th>
             
 
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
+            <th>Type</th>
 
             
 
             
 
-            <td class="description last"><p>Compass File Id</p></td>
+            <th class="last">Description</th>
         </tr>
+        </thead>
 
-    
-
-        <tr>
-            
-                <td class="name"><code>nodeId</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
+        <tbody>
+        
 
             
-            </td>
+<tr class="deep-level-0">
+  
+      <td class="name"><code>id</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>Compass File Id</p></td>
+</tr>
+
+
+        
 
             
+<tr class="deep-level-0">
+  
+      <td class="name"><code>nodeId</code></td>
+  
 
-            
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
 
-            <td class="description last"><p>Compass Node Id</p></td>
-        </tr>
 
-    
-    </tbody>
-</table>
+  
+  </td>
 
+  
+
+  
+
+  <td class="description last"><p>Compass Node Id</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
 
 
 
@@ -251,18 +328,19 @@
     
 
     
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line46">line 46</a>
-    </li></ul></dd>
     
 
     
 
     
 
+    
+        <p class="tag-source">
+            <a href="index.js.html" class="button">View Source</a>
+            <span>
+                <a href="index.js.html">index.js</a>, <a href="index.js.html#line46">line 46</a>
+            </span>
+        </p>
     
 </dl>
 
@@ -280,45 +358,62 @@
 
 
 
-<h5>Returns:</h5>
 
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'><p>Returns file as String</p></div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
         
-<div class="param-desc">
-    <p>Returns file as String</p>
+<code class="param-type">Promise.&lt;string></code>
+
+
+    </div>
+    
 </div>
 
+                
+        </div>
+    </div>
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise.&lt;string></span>
 
 
-    </dd>
-</dl>
+</div>
+            
+                <div class="member">
+
 
     
-
-
-
-
-
+    <h4 class="name" id=".newRequest">
+        <a class="href-link" href="#.newRequest">#</a>
         
             
-
+                <span class='tag'>async</span>
+            
+                <span class='tag'>static</span>
+            
+        
+        <span class="code-name">
+            
+                newRequest<span class="signature">(service, location, data<span class="signature-attributes">opt</span>, method<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Promise.&lt;any>}</span>
+            
+        </span>
+    </h4>
     
 
     
-    <h4 class="name" id=".newRequest"><span class="type-signature">(async, static) </span>newRequest<span class="signature">(service, location, data<span class="signature-attributes">opt</span>, method<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Promise.&lt;any>}</span></h4>
     
-
-    
-
-
 
 
 
@@ -330,180 +425,188 @@
 
     <h5>Parameters:</h5>
     
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
+<div class="table-container">
+    <table class="params table">
+        <thead>
         <tr>
             
-                <td class="name"><code>service</code></td>
+            <th>Name</th>
             
 
-            <td class="type">
-            
-                
-<span class="param-type">"Accounts"</span>
-|
-
-<span class="param-type">"Calendar"</span>
-|
-
-<span class="param-type">"Activity"</span>
-|
-
-<span class="param-type">"FileAssets"</span>
-|
-
-<span class="param-type">"TaskService"</span>
-|
-
-<span class="param-type">"LearningTasks"</span>
-|
-
-<span class="param-type">"User"</span>
-
+            <th>Type</th>
 
             
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
+            <th>Attributes</th>
             
 
             
 
-            <td class="description last"><p>API service to use</p></td>
+            <th class="last">Description</th>
         </tr>
+        </thead>
 
-    
-
-        <tr>
-            
-                <td class="name"><code>location</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
+        <tbody>
+        
 
             
-            </td>
+<tr class="deep-level-0">
+  
+      <td class="name"><code>service</code></td>
+  
 
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>API location to use</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>data</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">any</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>Data to send with request (optional).</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>method</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">"POST"</span>
+  <td class="type">
+  
+      
+<code class="param-type">"Accounts"</code>
 |
 
-<span class="param-type">"GET"</span>
+<code class="param-type">"Calendar"</code>
+|
 
+<code class="param-type">"Activity"</code>
+|
+
+<code class="param-type">"FileAssets"</code>
+|
+
+<code class="param-type">"TaskService"</code>
+|
+
+<code class="param-type">"LearningTasks"</code>
+|
+
+<code class="param-type">"User"</code>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>API service to use</p></td>
+</tr>
+
+
+        
 
             
-            </td>
+<tr class="deep-level-0">
+  
+      <td class="name"><code>location</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>API location to use</p></td>
+</tr>
+
+
+        
 
             
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
+<tr class="deep-level-0">
+  
+      <td class="name"><code>data</code></td>
+  
 
-                
+  <td class="type">
+  
+      
+<code class="param-type">any</code>
 
-                
-                </td>
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>Data to send with request (optional).</p></td>
+</tr>
+
+
+        
+
             
+<tr class="deep-level-0">
+  
+      <td class="name"><code>method</code></td>
+  
 
-            
+  <td class="type">
+  
+      
+<code class="param-type">"POST"</code>
+|
 
-            <td class="description last"><p>HTTP Method for request, default to POST</p></td>
-        </tr>
+<code class="param-type">"GET"</code>
 
-    
-    </tbody>
-</table>
 
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+
+  <td class="description last"><p>HTTP Method for request, default to POST</p></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
 
 
 
@@ -534,18 +637,19 @@
     
 
     
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line24">line 24</a>
-    </li></ul></dd>
     
 
     
 
     
 
+    
+        <p class="tag-source">
+            <a href="index.js.html" class="button">View Source</a>
+            <span>
+                <a href="index.js.html">index.js</a>, <a href="index.js.html#line24">line 24</a>
+            </span>
+        </p>
     
 </dl>
 
@@ -563,39 +667,48 @@
 
 
 
-<h5>Returns:</h5>
 
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'><p>Promise resolves reponse JSON</p></div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
         
-<div class="param-desc">
-    <p>Promise resolves reponse JSON</p>
+<code class="param-type">Promise.&lt;any></code>
+
+
+    </div>
+    
 </div>
 
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise.&lt;any></span>
-
-
-    </dd>
-</dl>
-
-    
+                
+        </div>
+    </div>
 
 
 
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>client.newRequest("Accounts","getAccount",null,"POST")</code></pre>
+    
+        <pre class="prettyprint"><code>client.newRequest("Accounts","getAccount",null,"POST")</code></pre>
+    
 
 
-
-        
+</div>
+            
+            </div>
+        </div>
     
 
     
@@ -608,19 +721,26 @@
 
 
 
-</div>
-
-<nav>
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-CompassClient.html">CompassClient</a></li></ul><h3>Namespaces</h3><ul><li><a href="module-CompassClient.Accounts.html">Accounts</a></li><li><a href="module-CompassClient.Activity.html">Activity</a></li><li><a href="module-CompassClient.Calendar.html">Calendar</a></li><li><a href="module-CompassClient.LearningTasks.html">LearningTasks</a></li><li><a href="module-CompassClient.TaskService.html">TaskService</a></li><li><a href="module-CompassClient.Users.html">Users</a></li></ul><h3><a href="global.html">Global</a></h3>
-</nav>
-
-<br class="clear">
-
-<footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Tue Mar 12 2024 18:00:33 GMT+1100 (Australian Eastern Daylight Time)
-</footer>
-
-<script> prettyPrint(); </script>
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.2</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
 <script src="scripts/linenumber.js"> </script>
+
+
 </body>
 </html>
