@@ -8,7 +8,8 @@ function Accounts(newRequest) {
   /**
    * Request current user info from cookies
    * @memberof module:CompassClient.Accounts
-   * @returns {Promise<AccountResponse>} Returns account details object
+   * @returns {Promise<AccountResponse>} Resolves account details object
+   * @deprecated This function is called on init, use client.userInfo instead
    */
   function getAccount(){
     return newRequest("Accounts",'GetAccount')

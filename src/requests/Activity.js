@@ -8,8 +8,8 @@ function Activity(newRequest) {
   /**
    * Requests upcoming lesson and activity info by Activity Id
    * @memberof module:CompassClient.Activity
-   * @param {number} activityId
-   * @returns {Promise<LessonResponse>} Returns Lesson object (includes activity info)
+   * @param {number} activityId - ActivityId of upcoming lesson
+   * @returns {Promise<LessonResponse>} Resolves Lesson object (includes activity info)
    */
   function getLessonsByActivityIdQuick(activityId){
     /** @type {LessonsActivityIdRequest} */
@@ -20,8 +20,8 @@ function Activity(newRequest) {
   /**
    * Requests all lessons and activity info by Activity Id
    * @memberof module:CompassClient.Activity
-   * @param {number} activityId
-   * @returns {Promise<LessonSummaryResponse>} Returns Activity info with array of Lesson objects
+   * @param {number} activityId - ActivityId of Activity and lessons
+   * @returns {Promise<LessonSummaryResponse>} Resolves Activity info with array of Lesson objects
    */
   function getLessonsByActivityId(activityId){
     /** @type {LessonsActivityIdRequest} */
@@ -32,8 +32,8 @@ function Activity(newRequest) {
   /**
    * Requests upcoming lesson and activity info by a childLesson Id
    * @memberof module:CompassClient.Activity
-   * @param {number} instanceId
-   * @returns {Promise<LessonResponse>} Returns Lesson object (includes activity info)
+   * @param {number} instanceId - InstanceId of upcoming lesson
+   * @returns {Promise<LessonResponse>} Resolves Lesson object (includes activity info)
    */
   function getLessonsByInstanceIdQuick(instanceId){
     /** @type {LessonsInstanceIdRequest} */
@@ -44,8 +44,8 @@ function Activity(newRequest) {
   /**
    * Requests all lessons and activity info by a child Lesson Id
    * @memberof module:CompassClient.Activity
-   * @param {number} instanceId
-   * @returns {Promise<LessonSummaryResponse>} Returns Activity info with array of Lesson objects
+   * @param {number} instanceId - Instance Id of Activity and lessons
+   * @returns {Promise<LessonSummaryResponse>} Resolves Activity info with array of Lesson objects
    */
   function getLessonsByInstanceId(instanceId){
     /** @type {LessonsInstanceIdRequest} */

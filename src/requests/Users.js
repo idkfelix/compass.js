@@ -8,8 +8,8 @@ function Users(newRequest){
   /**
    * Request all staff user info
    * @memberof module:CompassClient.Users
-   * @param {number} [limit] 
-   * @returns {Promise<Partial<StaffResponse>>} Returns array of staff object
+   * @param {number} [limit] - Limit amount of results
+   * @returns {Promise<StaffResponse>} Resolves array of staff object
    */
   function getAllStaff(limit){
     /** @type {{limit:number}} */

@@ -8,7 +8,7 @@ function TaskService(newRequest){
   /** 
    * Requests all task items
    * @memberof module:CompassClient.TaskService
-   * @param {number} [limit]
+   * @param {number} [limit] - Limit amount of results
    * @returns {Promise<TaskItemResponse>} Array of user task objects
    */
   function getAllTaskItems(limit){
@@ -19,7 +19,7 @@ function TaskService(newRequest){
   /** 
    * Requests all task items with status: False (visable on home page)
    * @memberof module:CompassClient.TaskService
-   * @param {number} [limit]
+   * @param {number} [limit] - Limit amount of results
    * @returns {Promise<TaskItemResponse>} Array of user task objects
    */
   function getTaskItems(limit){
@@ -30,8 +30,11 @@ function TaskService(newRequest){
   /**
    * Creates a task
    * @memberof module:CompassClient.TaskService
-   * @param {TaskItemBody} task
-   * @returns {Promise<number>} Task Id
+   * @param {TaskItemBody} task - Task item object
+   * @returns {Promise<number>} Resolves new Task Id
+   * @example client.TaskService.saveTaskItem({
+   *  taskName: 'example', status: true, dueDate: '2024-03-13T00:00:00.000Z'
+   * })
    */
   function saveTaskItem(task){
     /** @type {TaskItemRequest} */
@@ -42,8 +45,8 @@ function TaskService(newRequest){
   /**
    * Deletes a task item 
    * @memberof module:CompassClient.TaskService
-   * @param {TaskItemBody} task
-   * @returns {Promise<number>} Task Id
+   * @param {TaskItemBody} task - Task item object
+   * @returns {Promise<number>} Resolves deleted Task Id
    */
   function deleteTaskItem(task){
     /** @type {TaskItemRequest} */
@@ -54,8 +57,8 @@ function TaskService(newRequest){
   /**
    * Updates a task item by Id
    * @memberof module:CompassClient.TaskService
-   * @param {TaskItemBody} task
-   * @returns {Promise<null>} Returns nothing
+   * @param {TaskItemBody} task - Task item object
+   * @returns {Promise<null>} Resolves nothing
    */
   function updateTaskItem(task){
     /** @type {TaskItemRequest} */

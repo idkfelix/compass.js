@@ -5,9 +5,11 @@ import Accounts from "./requests/Accounts.js";
 import TaskService from "./requests/TaskService.js";
 import LearningTasks from "./requests/LearningTasks.js";
 /**
+ * API Client for Compass Edu
  * @module CompassClient
- * @param {string} domain 
- * @param {string} cookies
+ * @param {string} domain - School domain for Compass
+ * @param {string} cookies - Cookies to authorise API requests
+ * @example const client = CompassClient('school.compass.education','ASP.NET_SessionId=...')
  */
 async function CompassClient(domain, cookies){
   /**
@@ -17,6 +19,7 @@ async function CompassClient(domain, cookies){
    * @param {any} [data] - Data to send with request (optional).
    * @param {"POST"|"GET"} [method] - HTTP Method for request, default to POST
    * @returns {Promise<any>} Promise resolves reponse JSON
+   * @example client.newRequest("Accounts","getAccount",null,"POST")
    */
   async function newRequest(service,location,data,method) {
     let url = `https://${domain}/Services/${service}.svc/${location}`
@@ -36,8 +39,8 @@ async function CompassClient(domain, cookies){
 
   /**
    * @memberof module:CompassClient
-   * @param {string} id 
-   * @param {string} nodeId 
+   * @param {string} id - Compass File Id
+   * @param {string} nodeId - Compass Node Id
    * @returns {Promise<string>} Returns file as String
    */
   async function downloadFile(id,nodeId) {

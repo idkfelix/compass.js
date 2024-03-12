@@ -8,10 +8,10 @@ function Calendar(newRequest){
   /**
    * Get all events in a defined time frame by userId
    * @memberof module:CompassClient.Calendar
-   * @param {number} userId
-   * @param {string} startDate "yyyy-mm-dd"
-   * @param {string} endDate "yyyy-mm-dd"
-   * @returns {Promise<CalendarRespone>} Returns array of event objects
+   * @param {number} userId - Client UserId
+   * @param {string} startDate - "yyyy-mm-dd"
+   * @param {string} endDate - "yyyy-mm-dd"
+   * @returns {Promise<CalendarRespone>} Resolves array of event objects
    */
   function getCalendarEventsByUser(userId,startDate,endDate){
     /** @type {CalendarRequest} */
