@@ -4,7 +4,6 @@ import Activity from "./requests/Activity.js";
 import Accounts from "./requests/Accounts.js";
 import TaskService from "./requests/TaskService.js";
 import LearningTasks from "./requests/LearningTasks.js";
-
 /**
  * @module CompassClient
  * @param {string} domain 

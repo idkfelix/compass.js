@@ -1,15 +1,17 @@
 /**
- * @module Calendar
- * @param {*} newRequest
+ * Calendar.svc Requests
+ * @namespace Calendar
+ * @memberof module:CompassClient
+ * @param {module:CompassClient.newRequest} newRequest
  */
 function Calendar(newRequest){
   /**
-   * @memberof module:Calendar
-   * @description Get all events in a defined time frame by userId
+   * Get all events in a defined time frame by userId
+   * @memberof module:CompassClient.Calendar
    * @param {number} userId
    * @param {string} startDate "yyyy-mm-dd"
    * @param {string} endDate "yyyy-mm-dd"
-   * @returns {Promise<Partial<CalendarRespone>>} Returns array of event objects
+   * @returns {Promise<CalendarRespone>} Returns array of event objects
    */
   function getCalendarEventsByUser(userId,startDate,endDate){
     /** @type {CalendarRequest} */

@@ -1,15 +1,17 @@
 /**
- * @module LearningTasks
- * @param {*} newRequest
+ * LearningTasks.svc Requests
+ * @namespace LearningTasks
+ * @memberof module:CompassClient
+ * @param {module:CompassClient.newRequest} newRequest
  */
 function LearningTasks(newRequest){
   /**
-   * @memberof module:LearningTasks
-   * @description Requests Learning Tasks by UserId
+   * Requests Learning Tasks by UserId
+   * @memberof module:CompassClient.LearningTasks
    * @param {number} userId 
    * @param {number} [limit] 
    * @param {boolean} [showHiddenTasks]
-   * @returns {Promise<Partial<LearningTaskResponse>>} Returns array of users learning tasks
+   * @returns {Promise<LearningTaskResponse>} Returns array of users learning tasks
    */
   function getAllLearningTasksByUserId(userId,limit,showHiddenTasks){
     /** @type {Partial<LearningTaskUserIdRequest>} */
@@ -18,12 +20,12 @@ function LearningTasks(newRequest){
   }
 
   /**
-   * @memberof module:LearningTasks
-   * @description Requests Learning tasks by Activity Id
+   * Requests Learning tasks by Activity Id
+   * @memberof module:CompassClient.LearningTasks
    * @param {number} activityId 
    * @param {number} [limit] 
    * @param {boolean} [showHiddenTasks]
-   * @returns {Promise<Partial<LearningTaskResponse>>} Returns array of Activity's learning tasks
+   * @returns {Promise<LearningTaskResponse>} Returns array of Activity's learning tasks
    */
   function getAllLearningTasksByActivityId(activityId,limit,showHiddenTasks){
     /** @type {Partial<LearningTaskActivityIdRequest>} */

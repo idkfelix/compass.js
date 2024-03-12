@@ -1,11 +1,13 @@
 /**
- * @module Activity
- * @param {*} newRequest
+ * Activity.svc Requests
+ * @namespace Activity
+ * @memberof module:CompassClient
+ * @param {module:CompassClient.newRequest} newRequest
  */
 function Activity(newRequest) {
   /**
-   * @memberof module:Activity
-   * @description Requests upcoming lesson and activity info by Activity Id
+   * Requests upcoming lesson and activity info by Activity Id
+   * @memberof module:CompassClient.Activity
    * @param {number} activityId
    * @returns {Promise<LessonResponse>} Returns Lesson object (includes activity info)
    */
@@ -16,8 +18,8 @@ function Activity(newRequest) {
   }
 
   /**
-   * @memberof module:Activity
-   * @description Requests all lessons and activity info by Activity Id
+   * Requests all lessons and activity info by Activity Id
+   * @memberof module:CompassClient.Activity
    * @param {number} activityId
    * @returns {Promise<LessonSummaryResponse>} Returns Activity info with array of Lesson objects
    */
@@ -28,8 +30,8 @@ function Activity(newRequest) {
   }
 
   /**
-   * @memberof module:Activity
-   * @description Requests upcoming lesson and activity info by a childLesson Id
+   * Requests upcoming lesson and activity info by a childLesson Id
+   * @memberof module:CompassClient.Activity
    * @param {number} instanceId
    * @returns {Promise<LessonResponse>} Returns Lesson object (includes activity info)
    */
@@ -40,8 +42,8 @@ function Activity(newRequest) {
   }
 
   /**
-   * @memberof module:Activity
-   * @description Requests all lessons and activity info by a child Lesson Id
+   * Requests all lessons and activity info by a child Lesson Id
+   * @memberof module:CompassClient.Activity
    * @param {number} instanceId
    * @returns {Promise<LessonSummaryResponse>} Returns Activity info with array of Lesson objects
    */

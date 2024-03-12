@@ -1,11 +1,13 @@
-/**
- * @module Users
- * @param {*} newRequest
+/** 
+ * Users.svc Requests
+ * @namespace Users
+ * @memberof module:CompassClient
+ * @param {module:CompassClient.newRequest} newRequest
  */
 function Users(newRequest){
   /**
-   * @memberof module:Users
-   * @description Request all staff user info
+   * Request all staff user info
+   * @memberof module:CompassClient.Users
    * @param {number} [limit] 
    * @returns {Promise<Partial<StaffResponse>>} Returns array of staff object
    */

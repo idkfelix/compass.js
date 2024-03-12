@@ -1,11 +1,13 @@
-/**
- * @module TaskService
- * @param {*} newRequest
+/** 
+ * TaskService.svc Requests
+ * @namespace TaskService
+ * @memberof module:CompassClient
+ * @param {module:CompassClient.newRequest} newRequest
  */
 function TaskService(newRequest){
   /** 
-   * @memberof module:TaskService
-   * @description  Requests all task items
+   * Requests all task items
+   * @memberof module:CompassClient.TaskService
    * @param {number} [limit]
    * @returns {Promise<TaskItemResponse>} Array of user task objects
    */
@@ -15,8 +17,8 @@ function TaskService(newRequest){
   }
 
   /** 
-   * @memberof module:TaskService
-   * @description Requests all task items with status: False (visable on home page)
+   * Requests all task items with status: False (visable on home page)
+   * @memberof module:CompassClient.TaskService
    * @param {number} [limit]
    * @returns {Promise<TaskItemResponse>} Array of user task objects
    */
@@ -26,8 +28,8 @@ function TaskService(newRequest){
   }
   
   /**
-   * @memberof module:TaskService
-   * @description Creates a task
+   * Creates a task
+   * @memberof module:CompassClient.TaskService
    * @param {TaskItemBody} task
    * @returns {Promise<number>} Task Id
    */
@@ -38,8 +40,8 @@ function TaskService(newRequest){
   }
 
   /**
-   * @memberof module:TaskService
-   * @description Deletes a task item 
+   * Deletes a task item 
+   * @memberof module:CompassClient.TaskService
    * @param {TaskItemBody} task
    * @returns {Promise<number>} Task Id
    */
@@ -50,8 +52,8 @@ function TaskService(newRequest){
   }
 
   /**
-   * @memberof module:TaskService
-   * @description Updates a task item by Id
+   * Updates a task item by Id
+   * @memberof module:CompassClient.TaskService
    * @param {TaskItemBody} task
    * @returns {Promise<null>} Returns nothing
    */
