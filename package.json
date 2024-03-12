@@ -5,6 +5,7 @@
   "repository": {
     "url": "git+https://github.com/idkfelix/compass.js.git"
   },
+  "homepage": "https://idkfelix.github.io/compass.js/",
   "publishConfig": {
     "registry": "https://registry.npmjs.org",
     "access": "public"
