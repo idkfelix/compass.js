@@ -1,0 +1,31 @@
+type StaffResponse = Staff[];
+type Staff = {
+    baseRole: number;
+    campusId: number;
+    ce: string;
+    displayCode: string;
+    doNotContact: boolean;
+    f: string;
+    fn: string;
+    hasRegisteredDevice: boolean;
+    id: number;
+    ii: string;
+    ln: string;
+    mobileNumber: string;
+    n: string;
+    nameFirstPrefLastIdForm: string;
+    namePrefFirst: string;
+    namePrefLastId: string;
+    nif: string;
+    ns: string;
+    p: string;
+    parentIds: number[];
+    phoneExtension: string;
+    pv: string;
+    reportName: string;
+    rfid: string;
+    rfidCards: any[];
+    start: string;
+    sussiId: string;
+};
+//# sourceMappingURL=user.d.ts.map

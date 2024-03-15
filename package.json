@@ -13,6 +13,7 @@
   "main": "./src/index.js",
   "type": "module",
   "scripts": {
+    "build": "tsc -p .",
     "eslint": "npx eslint ./src/**/* --fix",
     "gen-docs": "npx jsdoc -c .jsdoc.json"
   },
@@ -21,6 +22,7 @@
   "devDependencies": {
     "@types/node": "^20.11.25",
     "better-docs": "^2.7.3",
-    "eslint-plugin-jsdoc": "^48.2.1"
+    "eslint-plugin-jsdoc": "^48.2.1",
+    "typescript": "^5.4.2"
   }
 }
