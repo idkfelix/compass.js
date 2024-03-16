@@ -21,8 +21,12 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.11.25",
+    "@types/node-fetch": "^2.6.11",
     "better-docs": "^2.7.3",
     "eslint-plugin-jsdoc": "^48.2.1",
     "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "node-fetch": "^2.7.0"
   }
 }

@@ -1,9 +1,12 @@
+import fetch from 'node-fetch';
+
 import Users from "./requests/Users.js";
 import Calendar from "./requests/Calendar.js";
 import Activity from "./requests/Activity.js";
 import Accounts from "./requests/Accounts.js";
 import TaskService from "./requests/TaskService.js";
 import LearningTasks from "./requests/LearningTasks.js";
+
 /**
  * API Client for Compass Edu
  * @module CompassClient
