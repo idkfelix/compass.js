@@ -15,7 +15,7 @@
 
 /**
  * Response Object for GetCalendarEventsByUser endpoint
- * @typedef {CalendarEvent[]} CalendarRespone
+ * @typedef {CalendarEvent[]} CalendarResponse
  */
 
 /**
@@ -45,4 +45,5 @@
  * @property {boolean} teachingDaysOnly
  * @property {string} textColor
  * @property {string} title
+ * @property {any[]} locations
  */
