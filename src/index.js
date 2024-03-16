@@ -33,10 +33,12 @@ async function CompassClient(domain, cookies){
         "accept": "*/*",
         "content-type": "application/json",
         "cookie": cookies,
-      },
+      }
     })
     if(!res.ok) throw new Error(res.statusText+" "+res.url.replace('https://'+domain,''))
+    console.log(res.status+' '+res.statusText+' | '+res.url)
     let json = await res.json()
+    // @ts-ignore
     return json.d
   }
 
