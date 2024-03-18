@@ -4,13 +4,14 @@ export default CompassClient;
  * @module CompassClient
  * @param {string} domain - School domain for Compass
  * @param {string} cookies - Cookies to authorise API requests
+ * @param {fetch} [customFetch] - custom fetch function (node-fetch)
  * @example const client = CompassClient('school.compass.education','ASP.NET_SessionId=...')
  */
-declare function CompassClient(domain: string, cookies: string): Promise<{
+declare function CompassClient(domain: string, cookies: string, customFetch?: typeof fetch): Promise<{
     domain: string;
     userId: number;
     userInfo: AccountResponse;
-    newRequest: (service: "Accounts" | "Calendar" | "Activity" | "FileAssets" | "TaskService" | "LearningTasks" | "User", location: string, data?: any, method?: "POST" | "GET") => Promise<any>;
+    newRequest: (service: any, location: any, data: any, method: any) => Promise<any>;
     downloadFile: (id: string, nodeId: string) => Promise<string>;
     Accounts: {
         getAccount: () => Promise<AccountResponse>;

@@ -22,7 +22,7 @@ type CalendarRequest = {
 /**
  * Response Object for GetCalendarEventsByUser endpoint
  */
-type CalendarRespone = CalendarEvent[];
+type CalendarResponse = CalendarEvent[];
 /**
  * Child Object of CalendarResponse
  */
@@ -51,5 +51,6 @@ type CalendarEvent = {
     teachingDaysOnly: boolean;
     textColor: string;
     title: string;
+    locations: any[];
 };
 //# sourceMappingURL=calendar.d.ts.map
