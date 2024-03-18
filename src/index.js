@@ -10,7 +10,7 @@ import LearningTasks from "./requests/LearningTasks.js";
  * @module CompassClient
  * @param {string} domain - School domain for Compass
  * @param {string} cookies - Cookies to authorise API requests
- * @param {fetch} [customFetch] - custom fetch function (node-fetch)
+ * @param {*} [customFetch] - custom fetch function (node-fetch)
  * @example const client = CompassClient('school.compass.education','ASP.NET_SessionId=...')
  */
 async function CompassClient(domain, cookies, customFetch){
