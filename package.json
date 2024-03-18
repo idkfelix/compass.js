@@ -25,8 +25,5 @@
     "better-docs": "^2.7.3",
     "eslint-plugin-jsdoc": "^48.2.1",
     "typescript": "^5.4.2"
-  },
-  "dependencies": {
-    "node-fetch": "^3.3.2"
   }
 }

@@ -1,5 +1,3 @@
-import fetch from 'node-fetch';
-
 import Users from "./requests/Users.js";
 import Calendar from "./requests/Calendar.js";
 import Activity from "./requests/Activity.js";
@@ -12,9 +10,10 @@ import LearningTasks from "./requests/LearningTasks.js";
  * @module CompassClient
  * @param {string} domain - School domain for Compass
  * @param {string} cookies - Cookies to authorise API requests
+ * @param {fetch} [customFetch] - custom fetch function (node-fetch)
  * @example const client = CompassClient('school.compass.education','ASP.NET_SessionId=...')
  */
-async function CompassClient(domain, cookies){
+async function CompassClient(domain, cookies, customFetch){
   /**
    * @memberof module:CompassClient
    * @param {"Accounts"|"Calendar"|"Activity"|"FileAssets"|"TaskService"|"LearningTasks"|"User"} service - API service to use
@@ -24,9 +23,11 @@ async function CompassClient(domain, cookies){
    * @returns {Promise<any>} Promise resolves reponse JSON
    * @example client.newRequest("Accounts","getAccount",null,"POST")
    */
+  const _fetch = customFetch || fetch
+
   async function newRequest(service,location,data,method) {
     let url = `https://${domain}/Services/${service}.svc/${location}`
-    const res = await fetch(url, {
+    const res = await _fetch(url, {
       "method": method || "POST",
       "body": JSON.stringify(data),
       "headers": {
@@ -50,7 +51,7 @@ async function CompassClient(domain, cookies){
    */
   async function downloadFile(id,nodeId) {
     let url = `https://${domain}/Services/FileAssets.svc/DownloadFile?id=${id}&nodeId=${nodeId}`
-    const res = await fetch(url, {
+    const res = await _fetch(url, {
       "method": "GET",
       "headers": {
         "accept": "*/*",
